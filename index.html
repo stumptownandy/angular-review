@@ -17,11 +17,11 @@
     <input type="text" required ng-model="myFilter">
     <span class="highlight"></span>
     <span class="bar"></span>
-    <label>Filter by...</label>
+    <label>Filter by name</label>
 </div>
 
 <div class="superHeroes">
-    <div class="hero" ng-repeat="hero in superHeroes | orderBy:'-awesomeness_level' | filter:myFilter">
+    <div class="hero" ng-repeat="hero in superHeroes | orderBy:'-awesomeness_level' | filter:{name:myFilter}">
         <h2 class="heroName">{{ hero.name }}</h2>
         <div class="hero-image">
             <img width="100%" height="100%" ng-src="{{ hero.thumbnail.path }}.{{ hero.thumbnail.extension }}" alt="">
