@@ -5,15 +5,17 @@ app.config([
    '$urlRouterProvider', 
 
     function($stateProvider,$urlRouterProvider){
-    $stateProvider
-        
+    
+      $urlRouterProvider.otherwise('/cards');
+        $stateProvider
+       
         .state('cards',{
         url: '/cards',
         templateUrl: '/views/cards.html',
-        controller:''
+        controller:'CardsCtrl'
         })
         .state('hero',{
-        url: '',
+        url: '/hero',
         templateUrl: '/views/hero.html',
         controller:''
         })
